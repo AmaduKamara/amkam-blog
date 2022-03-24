@@ -52,7 +52,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
 
-  # Rspec test suite
+  # Rspec test gem
   gem 'rspec-rails', '~> 5.0.0'
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
