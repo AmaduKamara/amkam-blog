@@ -29,6 +29,10 @@ gem "jbuilder"
 
 gem 'tzinfo-data'
 
+gem 'ffi', '~> 1.15', '>= 1.15.5'
+
+gem 'rails-controller-testing'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

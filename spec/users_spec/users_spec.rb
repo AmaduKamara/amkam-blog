@@ -2,18 +2,35 @@ require "rails_helper"
 
 RSpec.describe "Users", :type => :request do
 
-  it "Create Users page" do
-    get "/users"
-    expect(response).to render_template(:index)
+  describe "GET index" do
+    before(:each) { get '/users' }
 
-    get "/users/:id"
-    expect(response).to render_template(:show)
+    it "it should render a template" do
+      expect(response).to render_template('users/index')
+    end
 
-    expect(response.body).to include("Users Index and show to render successfully")
+    it "has a 200 status code" do
+       expect(response).to have_http_status(:ok)
+    end
+
+    it 'should test heading text inside template' do
+      expect(response.body).to include('Users Index Page')
+    end
   end
 
-  it "does not render a different template" do
-    get "/users"
-    expect(response).to_not render_template(:show)
+  describe 'GET show' do
+    before(:each) { get '/users/1' }
+
+    it 'Should be 200' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'should render a template' do
+      expect(response).to render_template('users/show')
+    end
+
+    it 'should test heading text inside template' do
+      expect(response.body).to include('Show User Page')
+    end
   end
 end
