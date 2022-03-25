@@ -1,16 +1,15 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe "Users", :type => :request do
-
-  describe "GET index" do
+RSpec.describe 'Users', type: :request do
+  describe 'GET index' do
     before(:each) { get '/users' }
 
-    it "it should render a template" do
+    it 'it should render a template' do
       expect(response).to render_template('users/index')
     end
 
-    it "has a 200 status code" do
-       expect(response).to have_http_status(:ok)
+    it 'has a 200 status code' do
+      expect(response).to have_http_status(:ok)
     end
 
     it 'should test heading text inside template' do
