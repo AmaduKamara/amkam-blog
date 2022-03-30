@@ -1,5 +1,5 @@
  <ul class="list-inline">
-  <li class="shadow mb-4 p-3 border-start border-2 border-info rounded">
+  <li class="shadow mb-4 p-3 rounded">
     <h4 class="text-muted text-decoration-none"><%= @user.name %></h4>
     <p><%= @post.text %></p>
     <div class="d-flex justify-content-end">
@@ -14,9 +14,9 @@
         </div>
       </div>
     </div>
-    <ul class="list-inline">
+    <ul class="list-inline ml-5">
       <% @post.recent_comments.each do |cmt| %>
-        <li>
+        <li class="border-start border-4 border-info px-2">
           <h5>Username: <%= cmt.author.name %></h5>
           <p><%= cmt.text %></p>
         </li>
