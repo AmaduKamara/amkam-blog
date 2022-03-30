@@ -4,7 +4,9 @@
 
 ## Project screenshots
 
-![image](https://user-images.githubusercontent.com/50941074/160915270-b1e2fd22-5043-418a-a759-3dcdc90f1ad1.png)
+![image](https://user-images.githubusercontent.com/50941074/160933779-afe624d3-41af-44a0-9481-1e645171f7b2.png)
+
+![image](https://user-images.githubusercontent.com/50941074/160933893-e5430411-c2e6-473b-bb17-b222d064a18a.png)
 
 Additional description about the project and its features.
 
