@@ -1,0 +1,26 @@
+ <ul class="list-inline">
+  <li class="shadow mb-4 p-3 border-start border-2 border-info rounded">
+    <h4 class="text-muted text-decoration-none"><%= @user.name %></h4>
+    <p><%= @post.text %></p>
+    <div class="d-flex justify-content-end">
+      <div class="d-flex">
+        <div class="mx-2">
+          <span>0</span>
+          <i class="fas fa-comment mx-1"></i>
+        </div>
+        <div class="mx-2">
+          <span>0</span>
+          <i class="fas fa-heart mx-1"></i>
+        </div>
+      </div>
+    </div>
+    <ul class="list-inline">
+      <% @post.recent_comments.each do |cmt| %>
+        <li>
+          <h5>Username: <%= cmt.author.name %></h5>
+          <p><%= cmt.text %></p>
+        </li>
+      <% end %>
+    </ul>
+  </li>
+</ul>
