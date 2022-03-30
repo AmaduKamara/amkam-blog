@@ -1,6 +1,6 @@
  <ul class="list-inline">
   <% @user.recent_posts.each do |post|%>
-    <li class="shadow mb-4 p-3 border-start border-2 border-info rounded">
+    <li class="shadow mb-4 p-3 border-start border-2 border-info bg-white rounded">
       <h4><%= post.title %></h4>
       <p><%= truncate post.text, length: 150 %></p>
       <div class="d-flex justify-content-end">

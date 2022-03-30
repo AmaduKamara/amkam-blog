@@ -1,6 +1,6 @@
  <ul class="list-inline">
   <% @posts.each do |post| %>
-    <li class="shadow mb-4 p-3 border-start border-2 border-info rounded">
+    <li class="shadow mb-4 p-3 border-start border-2 border-info rounded bg-white">
       <h4><%= link_to post.title, user_post_path(@user.id, post.id), class: 'text-muted text-decoration-none' %></h4>
       <p><%= truncate post.text, length: 150 %></p>
       <div class="d-flex justify-content-end">
