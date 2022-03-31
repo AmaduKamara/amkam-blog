@@ -1,1 +1,7 @@
-<h1>Users Index Page</h1>
+<% if @user %>
+<div class="d-flex justify-content-center">
+  <%= render 'users/user' %>
+</div>
+<% else %>
+  <h1>Sorry, no user found. 👍</h1>
+<% end %>
