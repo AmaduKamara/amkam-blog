@@ -25,7 +25,7 @@ Additional description about the project and its features.
   > in your cmd or command line navigate to where this project is located, then;
 
 ```cmd
-cd 
+cd amkam-blog
 ```
 
 > thereafter run
