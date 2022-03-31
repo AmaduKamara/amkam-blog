@@ -40,7 +40,7 @@ code .
   > in your cmd or command line navigate to where this project is located, then;
 
 ```cmd
-cd 
+cd amkam-blog
 ```
 
 ## Install Gems
