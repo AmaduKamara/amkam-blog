@@ -17,7 +17,7 @@
       </div>
       <ul class="list-inline">
         <% post.recent_comments.each do |cmt| %>
-          <li class="border-start border-4 px-4 border border-start-info py-1">
+          <li class="border-start px-4 border-4 border-info px-2 shadow py-1 mb-2">
             <h5><%= cmt.author.name %></h5>
             <p><%= cmt.text %></p>
           </li>

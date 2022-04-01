@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to user_posts_url(current_user) }
+        format.html { redirect_to user_posts_url(current_user.id) }
       else
         format.html { render :new }
       end

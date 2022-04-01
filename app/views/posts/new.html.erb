@@ -2,7 +2,7 @@
   <div class="w-50">
     <h2 class="text-muted">Add new Post</h2>
     <hr>
-    <%= form_with(model: @post) do |form| %>
+    <%= form_with model: @post, url: user_posts_path, scope: :post do |form| %>
       <%= form.text_field :title, class: 'mb-3 py-3 px-3 w-100 border-0 shadow', placeholder: 'Enter post title' %> <br>
       <%= form.text_area :text, size: "30x3", class: 'mb-3 py-3 px-3 w-100 border-0 shadow', placeholder: 'Enter post text' %> <br>
       <%= form.submit "Submit post", class: 'btn btn-info py-2 px-5 text-white' %>
