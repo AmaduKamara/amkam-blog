@@ -18,8 +18,10 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
+        flash[:notice] = 'Post created successfully. 👍'
         format.html { redirect_to user_posts_url(current_user.id) }
       else
+        flash[:notice] = 'Post creation failed. Try again'
         format.html { render :new }
       end
     end

@@ -4,7 +4,7 @@ class LikesController < ApplicationController
     new_like = current_user.likes.new(like_params)
 
     if new_like.save
-      redirect_to params[:like][:current_url], notice: 'Success!'
+      redirect_to params[:like][:current_url], notice: 'Successfully liked the post! 👍'
     else
       redirect_to params[:like][:current_url], notice: 'Sorry, like did not get save!'
     end

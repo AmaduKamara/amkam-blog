@@ -20,6 +20,17 @@
   </head>
   <body style="background-color: #f1f1f1">
     <%= render 'shared/header' %>
+
+    <div class="d-flex justify-content-center">
+      <% if flash[:notice] %>
+        <div class="w-50 alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>
+            <%= flash[:notice] %>
+          </strong>
+        </div>
+      <% end %>
+    </div>
+
     <div class="container">
       <%= yield %>
     </div>
