@@ -6,18 +6,18 @@
       <div class="d-flex justify-content-end">
         <div class="d-flex">
           <div class="mx-2">
-            <span>0</span>
+            <span><%= post.comments_counter %></span>
             <i class="fas fa-comment mx-1"></i>
           </div>
-          <div class="mx-2">
-            <span>0</span>
-            <i class="fas fa-heart mx-1"></i>
+          <div class="mx-2 d-flex justify-center">
+            <span><%= post.likes_counter %></span>
+            <%= render partial: 'posts/like', locals: { url: "/users/#{@user.id}/posts/#{post.id}/likes", post: post } %>
           </div>
         </div>
       </div>
       <ul class="list-inline">
         <% post.recent_comments.each do |cmt| %>
-          <li class="border-start border-4 px-4 border border-start-info py-1">
+          <li class="border-start px-4 border-4 border-info px-2 shadow py-1 mb-2">
             <h5><%= cmt.author.name %></h5>
             <p><%= cmt.text %></p>
           </li>

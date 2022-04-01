@@ -2,6 +2,11 @@
 
 <div class="d-flex justify-content-center">
   <div>
+    <% if current_user == @user %>
+      <div class="mb-4 d-flex justify-content-center">
+        <a><%= link_to "Add new post", '/posts/new', class:"btn btn-info text-white py-2 px-5" %></a>
+      </div>
+    <% end %>
     <%= render 'posts/post' %>
   </div>
 </div>

@@ -4,9 +4,11 @@
 
 ## Project screenshots
 
-![image](https://user-images.githubusercontent.com/50941074/160933779-afe624d3-41af-44a0-9481-1e645171f7b2.png)
+![image](https://user-images.githubusercontent.com/50941074/161249966-dd04aa9c-eeff-4498-b296-e94cdd124560.png)
 
-![image](https://user-images.githubusercontent.com/50941074/160933893-e5430411-c2e6-473b-bb17-b222d064a18a.png)
+![image](https://user-images.githubusercontent.com/50941074/161249804-51cd1395-58e2-4887-bc6b-67afe96324b0.png)
+
+![image](https://user-images.githubusercontent.com/50941074/161250215-a66d3499-32a2-4c59-bbd5-dac06e4fe28d.png)
 
 Additional description about the project and its features.
 
