@@ -18,7 +18,8 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET show' do
-    before(:each) { get '/users/1' }
+    user = User.create(name: 'Amkam', posts_counter: 0)
+    before(:each) { get user_path id: user.id }
 
     it 'Should be 200' do
       expect(response).to have_http_status(:ok)

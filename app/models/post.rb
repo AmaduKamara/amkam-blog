@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   validates :title, length: 1..250, presence: true, allow_blank: false
   validates :comments_counter, numericality: { only_integer: true, greater_than: -1 }
   validates :likes_counter, numericality: { only_integer: true, greater_than: -1 }
+  validates :text, presence: true
 
   def recent_comments
     comments.order(created_at: :desc).includes(:author).limit(5)
