@@ -47,15 +47,32 @@ cd amkam-blog
 
 ## Install Gems
 
-
 ```cmd
 bundle install
+```
+> then initialize the database
+
+```cmd
+rails db:reset
+```
+Incase its the first time:
+
+```cmd
+rails db:create
+```
+then
+
+```cmd
+rails db:migrate
+```
+```cmd
+rails db:test:prepare
 ```
 
 > thereafter run
 
 ```cmd
-rails s
+.rails s
 ```
 
 ## Author
