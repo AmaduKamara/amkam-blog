@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  describe 'GET post' do
-    before(:each) { get '/users/:user_id/posts' }
+  user = User.create(name: 'Amkam', posts_counter: 0)
+  post = user.posts.create(title: 'Post1', text: 'The WebAvenger', likes_counter: 0, comments_counter: 0)
+  describe 'GET posts' do
+  before(:each) { get user_posts_path user_id: user.id  }
 
     it 'should render a template' do
       expect(response).to render_template('posts/index')
@@ -13,12 +15,12 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'should test heading text inside template' do
-      expect(response.body).to include('Posts Index Page')
+      expect(response.body).to include('Amkam Blog')
     end
   end
 
   describe 'GET show' do
-    before(:each) { get '/users/:user_id/posts/11' }
+    before(:each) { get user_post_path user_id: user.id, id: post.id }
 
     it 'Should be 200' do
       expect(response).to have_http_status(:ok)
@@ -29,7 +31,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'should test heading text inside template' do
-      expect(response.body).to include('Show Post Pag')
+      expect(response.body).to include('Amkam Blog')
     end
   end
 end

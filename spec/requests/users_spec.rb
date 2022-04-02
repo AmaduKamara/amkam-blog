@@ -13,7 +13,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should test heading text inside template' do
-      expect(response.body).to include('Users Index Page')
+      expect(response.body).to include('Amkam Blog')
     end
   end
 
@@ -30,7 +30,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should test heading text inside template' do
-      expect(response.body).to include('Show User Page')
+      expect(response.body).to include('Amkam Blog')
     end
   end
 end
