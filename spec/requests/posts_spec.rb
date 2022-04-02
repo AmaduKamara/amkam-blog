@@ -4,7 +4,7 @@ RSpec.describe 'Posts', type: :request do
   user = User.create(name: 'Amkam', posts_counter: 0)
   post = user.posts.create(title: 'Post1', text: 'The WebAvenger', likes_counter: 0, comments_counter: 0)
   describe 'GET posts' do
-  before(:each) { get user_posts_path user_id: user.id  }
+    before(:each) { get user_posts_path user_id: user.id }
 
     it 'should render a template' do
       expect(response).to render_template('posts/index')
