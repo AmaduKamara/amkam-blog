@@ -21,17 +21,20 @@
   <body style="background-color: #f1f1f1">
     <%= render 'shared/header' %>
 
-    <div class="d-flex justify-content-center">
-      <% if flash[:notice] %>
-        <div class="w-50 alert alert-warning alert-dismissible fade show" role="alert">
-          <strong>
-            <%= flash[:notice] %>
-          </strong>
-        </div>
-      <% end %>
-    </div>
-
     <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <!-- To be placed by partner -->
+      <div id="user_nav">
+        <% if user_signed_in? %>
+            Signed in as <%= current_user.email %>. This cannot be cheese?
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+            <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+        <% end %>
+      <!-- end -->
+
       <%= yield %>
     </div>
 
