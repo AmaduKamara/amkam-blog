@@ -4,6 +4,8 @@
 
 ## Project screenshots
 
+![image](https://user-images.githubusercontent.com/50941074/161973727-d2c4d404-bf03-4513-b312-f6321bed3516.png)
+
 ![image](https://user-images.githubusercontent.com/50941074/161249966-dd04aa9c-eeff-4498-b296-e94cdd124560.png)
 
 ![image](https://user-images.githubusercontent.com/50941074/161249804-51cd1395-58e2-4887-bc6b-67afe96324b0.png)
