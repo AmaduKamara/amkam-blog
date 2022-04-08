@@ -18,6 +18,25 @@ RSpec.describe 'user#Show', type: :feature do
       visit user_path(@user1.id)
     end
     
+    it "show user's profile picture" do
+      all('img').each do |i|
+        expect(i[:src]).to eq('sammy.png')
+      end
+    end
+
+    it "show user's name" do
+      expect(page).to have_content 'Sammy'
+    end
+
+    it 'show number of posts per user' do
+      user = User.first
+      expect(page).to have_content(user.posts_counter)
+    end
+
+    it "show user's bio." do
+      expect(page).to have_content('bio')
+    end
+
 
     it "show user's first 3 posts." do
       expect(page).to have_content 'This is my fourth post'
