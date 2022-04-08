@@ -3,21 +3,28 @@ require 'rails_helper'
 RSpec.describe 'user#Show', type: :feature do
   describe 'User' do
     before(:each) do
-      @user1 = User.create(name: 'Sammy', photo: 'sammy.png', bio: 'Sammy bio', posts_counter: 0, email: 'sammy@gmail.com', password: 'test12345')
-      @user2 = User.create(name: 'Ahmed', bio: 'Ahmed bio', photo: 'ahmed.png', email: 'ahmed@gmail.com', password: 'test12345')
-      @user3 = User.create(name: 'John', bio: 'John bio', photo: 'john.png', email: 'john@gmail.com', password: 'test12345')
+      @user1 = User.create(name: 'Sammy', photo: 'sammy.png', bio: 'Sammy bio', posts_counter: 0,
+                           email: 'sammy@gmail.com', password: 'test12345')
+      @user2 = User.create(name: 'Ahmed', bio: 'Ahmed bio', photo: 'ahmed.png', email: 'ahmed@gmail.com',
+                           password: 'test12345')
+      @user3 = User.create(name: 'John', bio: 'John bio', photo: 'john.png', email: 'john@gmail.com',
+                           password: 'test12345')
 
       visit root_path
       fill_in 'Email', with: 'sammy@gmail.com'
       fill_in 'Password', with: 'test12345'
       click_button 'Log in'
-      @post1 = Post.create(title: 'First Post', text: 'This is my first post', comments_counter: 0, likes_counter: 0, author: @user1)
-      @post2 = Post.create(title: 'Second Post', text: 'This is my second post', comments_counter: 0, likes_counter: 0, author: @user1)
-      @post3 = Post.create(title: 'Third Post', text: 'This is my third post', comments_counter: 0, likes_counter: 0, author: @user1)
-      @post4 = Post.create(title: 'Fourth Post', text: 'This is my fourth post', comments_counter: 0, likes_counter: 0, author: @user1)
+      @post1 = Post.create(title: 'First Post', text: 'This is my first post', comments_counter: 0, likes_counter: 0,
+                           author: @user1)
+      @post2 = Post.create(title: 'Second Post', text: 'This is my second post', comments_counter: 0, likes_counter: 0,
+                           author: @user1)
+      @post3 = Post.create(title: 'Third Post', text: 'This is my third post', comments_counter: 0, likes_counter: 0,
+                           author: @user1)
+      @post4 = Post.create(title: 'Fourth Post', text: 'This is my fourth post', comments_counter: 0, likes_counter: 0,
+                           author: @user1)
       visit user_path(@user1.id)
     end
-    
+
     it "show user's profile picture" do
       all('img').each do |i|
         expect(i[:src]).to eq('sammy.png')

@@ -3,9 +3,12 @@ require 'rails_helper'
 RSpec.describe 'users#index', type: :feature do
   describe 'User Test' do
     before(:each) do
-      @user1 = User.create(name: 'Sammy', photo: 'sammy.png', bio: 'Sammy bio', posts_counter: 0, email: 'sammy@gmail.com', password: 'test12345')
-      @user2 = User.create(name: 'Ahmed', bio: 'Ahmed bio', photo: 'sammy.png', email: 'ahmed@gmail.com', password: 'test12345')
-      @user3 = User.create(name: 'John', bio: 'John bio', photo: 'sammy.png', email: 'john@gmail.com', password: 'test12345')
+      @user1 = User.create(name: 'Sammy', photo: 'sammy.png', bio: 'Sammy bio', posts_counter: 0,
+                           email: 'sammy@gmail.com', password: 'test12345')
+      @user2 = User.create(name: 'Ahmed', bio: 'Ahmed bio', photo: 'sammy.png', email: 'ahmed@gmail.com',
+                           password: 'test12345')
+      @user3 = User.create(name: 'John', bio: 'John bio', photo: 'sammy.png', email: 'john@gmail.com',
+                           password: 'test12345')
       visit root_path
       fill_in 'Email', with: 'ahmed@gmail.com'
       fill_in 'Password', with: 'test12345'

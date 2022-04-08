@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'Post show', type: :feature do
-    describe 'Post' do
-      before(:each) do
-      @user1 = User.create(name: 'Amkam', photo: 'Tom.png', bio: 'bio', posts_counter: 0, email: 'amy@gmail.com', password: 'password')
+  describe 'Post' do
+    before(:each) do
+      @user1 = User.create(name: 'Amkam', photo: 'Tom.png', bio: 'bio', posts_counter: 0, email: 'amy@gmail.com',
+                           password: 'password')
       @user2 = User.create(name: 'Amy', bio: 'bio', photo: 'Tom.png', email: 'amy@gmail.com', password: 'password')
       @user3 = User.create(name: 'Jerry', bio: 'bio', photo: 'Tom.png', email: 'jerry@gmail.com', password: 'password')
 
@@ -12,10 +13,14 @@ RSpec.describe 'Post show', type: :feature do
       fill_in 'Password', with: 'password'
       click_button 'Log in'
 
-      @post1 = Post.create(title: 'First Post', text: 'This is my first post', comments_counter: 0, likes_counter: 0, author: @user1)
-      @post2 = Post.create(title: 'Second Post', text: 'This is my second post', comments_counter: 0, likes_counter: 0, author: @user1)
-      @post3 = Post.create(title: 'Third Post', text: 'This is my third post', comments_counter: 0, likes_counter: 0, author: @user1)
-      @post4 = Post.create(title: 'Fourth Post', text: 'This is my fourth post', comments_counter: 0, likes_counter: 0, author: @user1)
+      @post1 = Post.create(title: 'First Post', text: 'This is my first post', comments_counter: 0, likes_counter: 0,
+                           author: @user1)
+      @post2 = Post.create(title: 'Second Post', text: 'This is my second post', comments_counter: 0, likes_counter: 0,
+                           author: @user1)
+      @post3 = Post.create(title: 'Third Post', text: 'This is my third post', comments_counter: 0, likes_counter: 0,
+                           author: @user1)
+      @post4 = Post.create(title: 'Fourth Post', text: 'This is my fourth post', comments_counter: 0, likes_counter: 0,
+                           author: @user1)
 
       @comment1 = Comment.create(text: 'Good job!', author: User.first, post: Post.first)
       @comment2 = Comment.create(text: 'Keep it up!', author: User.first, post: Post.first)
