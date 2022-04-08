@@ -21,13 +21,19 @@ RSpec.describe 'posts#index', type: :feature do
     end
 
     it "shows user's profile picture" do
-        all('img').each do |i|
-          expect(i[:src]).to eq('Tom.png')
-        end
+      all('img').each do |i|
+        expect(i[:src]).to eq('Tom.png')
       end
-      it 'shows the users username' do
-        expect(page).to have_content('Amkam')
-      end
+    end
+    
+    it 'shows the users username' do
+      expect(page).to have_content('Amkam')
+    end
+
+    it 'shows number of posts of user has written' do
+      post = Post.all
+      expect(post.size).to eql(4)
+    end
 
     it 'shows number of posts by user' do
       user = User.first
