@@ -77,6 +77,15 @@ rails db:test:prepare
 .rails s
 ```
 
+**To run test**
+```cmd
+bundle exec rspec
+```
+Or
+```mdx
+rspec spec
+```
+
 ## Author
 👤 **Amadu Kamara (Amkam)**
 
