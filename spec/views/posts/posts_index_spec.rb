@@ -20,7 +20,14 @@ RSpec.describe 'posts#index', type: :feature do
       visit(user_posts_path(@user1.id))
     end
 
-    
+    it "shows user's profile picture" do
+        all('img').each do |i|
+          expect(i[:src]).to eq('Tom.png')
+        end
+      end
+      it 'shows the users username' do
+        expect(page).to have_content('Amkam')
+      end
 
     it 'shows number of posts by user' do
       user = User.first
