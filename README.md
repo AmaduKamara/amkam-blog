@@ -86,13 +86,21 @@ Or
 rspec spec
 ```
 
-## Author
+## Authors
+
 👤 **Amadu Kamara (Amkam)**
 
 - [GitHub](https://github.com/AmaduKamara)
 - [LinkedIn](https://www.linkedin.com/in/amadu-kamara-3b60a25b)
 - [Twitter](https://twitter.com/DevAmkam)
 - [Facebook](https://www.facebook.com/amadus.kamara.7)
+
+👤 **Lilian Francis**
+
+- Github : [@lilyfrancis](https://github.com/lilyfrancis)
+- Twitter: [@ifnotlily](https://twitter.com/ifnotlily)
+- LinkdIn : [@lilianfrancis](https://www.linkedin.com/in/lilianfrancis/)
+
 
 ## 🤝 Contributing
 
