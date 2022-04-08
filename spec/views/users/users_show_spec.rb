@@ -37,7 +37,6 @@ RSpec.describe 'user#Show', type: :feature do
       expect(page).to have_content('bio')
     end
 
-
     it "show user's first 3 posts." do
       expect(page).to have_content 'This is my fourth post'
       expect(page).to have_content 'This is my third post'
