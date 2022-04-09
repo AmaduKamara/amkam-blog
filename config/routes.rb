@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       post 'users/sign_up' => 'users#register'
       post 'users/sign_in' => 'users#login'
 
+      post 'posts/create' => 'posts#create'
       get 'posts' => 'posts#index'
       get 'comments' => 'comments#index'
       post 'comments/create' => 'comments#create'
